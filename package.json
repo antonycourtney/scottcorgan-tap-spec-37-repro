@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "dependencies": {
+    "tape": "4.5.1",
+    "tap-spec": "4.1.1"
+  },
+  "scripts": {
+    "working": "tape test/spec/one.js | tap-spec",
+    "broken": "node test/test.js"
+  }
+}
