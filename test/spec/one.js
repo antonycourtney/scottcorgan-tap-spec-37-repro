@@ -1,6 +1,9 @@
-var test = require("tape");
+// var test = require("tape");
 
-test("whatever", function (t) {
-  t.ok(true);
-  t.end();
-});
+function runTest(htest) {
+  htest("whatever", function (t) {
+    t.ok(true);
+    t.end();
+  });
+}
+module.exports = runTest

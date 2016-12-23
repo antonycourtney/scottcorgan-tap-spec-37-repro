@@ -1,5 +1,10 @@
 var tape = require("tape");
 var tapSpec = require("tap-spec");
 
-tape.createStream().pipe(tapSpec()).pipe(process.stdout);
-require("./spec/one.js");
+var htest = tape.createHarness();
+
+htest.createStream().pipe(tapSpec()).pipe(process.stdout);
+
+var f = require("./spec/one.js");
+
+f(htest);
